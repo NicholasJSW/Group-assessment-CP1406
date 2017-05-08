@@ -1,3 +1,35 @@
-p test {
+body {
+    padding: 0px;
+    border-top-style: solid;
+    border-top-color:#EAEAEA ;
+    border-top-width: 76px;
+}
+p#palettetest{
+    font-family: Helvetica;
+    font-size: 18px;
+    margin-top: -56px;
+    text-align: left;
+    text-indent: 350px;
+}
+p#palettetest:hover{
+    color:#EAEAEA;
+    display:inline;
+    float:left;
+    background-color: #8E793E;
+    width: 100%;
+    background-size: 25%;
+    border-width: 10px;
+
+}
+p {
     color: #464646;
+    text-align: center;
+}
+
+img#Homepic {
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+    color: #231F20;
+    background: #231F20;
 }
