@@ -1,27 +1,90 @@
 body {
     margin: 0px;
-}
-p {
-    color: #231F20;
-    text-align: center;
-    font-family: "Lucida Sans Unicode";
-    font-size: small;
-    background-color: #CCCCCC;
+    background-color: rgba(142,121,62,0.5);
 
 }
+p {
+    color: #fff;
+    text-align: center;
+    font-family: "Lucida Sans Unicode";
+    font-size: large;
+    background-color: #464646;
+    margin:0;
+    padding-left: 20px;
+    padding-right:20px;
+    padding-bottom:20px;
+}
+.background-imgs{
+    opacity: 0.3;
+    width:100%;
+    height: auto;
+}
+#extra-artists{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.artist-portrait{
+    float:right;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 10px;
+}
 .faux-border{
-    background-color: #111;
+    background-color:rgba(0,102,153,0.7);
     padding-left: 17%;
     padding-right: 17%;
 }
 H1{
-    color: #231F20;
+    color: #fff;
     text-align: left;
     font-family: "Lucida Sans Unicode";
     font-size: 25px;
-    background-color: #CCCCCC;
+    background-color: #231f20;
     margin-top: 0px;
     padding: 1%;
+}
+H2{
+    color: #fff;
+    text-align: center;
+    font-family: "Lucida Sans Unicode";
+    font-size: large;
+    background-color: #464646;
+    opacity: 1;
+    margin:0;
+    margin-left: -3%;
+}
+ul{
+    list-style-type: none;
+    margin-left:-3%;
+}
+form {
+    text-align: center;
+    background-color: #231F20;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-width: 50px;
+    border-color: rgba(0, 0, 0, 0);
+    border-style: solid;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: "Lucida Sans Unicode";
+    font-weight: bold;
+    user-input:20px ;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+#sponser-picture{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#feature-artist{
+    border-left:solid;
+    border-color: #8E793E;
+    border-width: 50px;
 }
 
 @media only screen and (max-width:640px) {
@@ -33,27 +96,70 @@ H1{
         margin-left: -17%
     }
 }
-img#Homepic {
-    max-width: 100%;
-    height: auto;
-    overflow: hidden;
+@media only screen and (max-width:900px) {
+        header{
+            height: 80px;
+            margin: 0px;
+            padding-left: 0%;
+            border-bottom: 15px;
+            padding-bottom: 10px;
+        }
+    }
+@media only screen and (max-width:1650px) {
+    #navbar img{
+        display:none;
+    }
 }
+
 #artist-pic{
     max-width: 100%;
     max-height: 100%;
+    opacity: 0.5;
+}
+
+#artist-pic-feature {
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 0.5;
+    -webkit-transition-property: color, background-color, padding-left, border-right;
+    -webkit-transition-duration: 400ms, 400ms, 400ms, 400ms;
+    border-right: 1px solid #fff;
+}
+#artist-pic-feature:hover {
+    background-color: #8E793E;
+    color: #333;
+    padding-left: 50px;
+    border-right: 5px;
+    border-right-style: solid;
+    border-right-color: #8E793E;
+    opacity: 1;
 }
 #artist-pic:hover{
-    border-style:solid;
-    border-width: 10px;
-    border-color: #FFFFFF;
-    max-width: 95%;
-    max-height:95% ;
+    opacity: 1;
+    -webkit-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    transform: scale(1.01);
+    box-shadow:
+            1px 1px #fff,
+            2px 2px #000,
+            3px 3px #000,
+            4px 4px #fff;
+    -webkit-transform: translateX(-4px);
+    transform: translateX(-4px);
 }
-#navbar{
+a {
+    text-decoration: none;
+    color: #231F20;
+    font-size: 18px;
+    font-family: "Lucida Sans Unicode";
+}
+header{
     background-color: #CCCCCC;
+    width:100%;
     height: 80px;
     margin: 0px;
     padding-left: 0%;
+    z-index: 100;
     border-bottom: 15px;
     border-bottom-style: solid;
     border-bottom-color: #111111;
@@ -64,7 +170,6 @@ img#Homepic {
     padding:35px;
     list-style: none;
     display:inline-block;
-    
 }
 #navbar img{
     margin-left: 40%;
@@ -75,12 +180,10 @@ img#Homepic {
     font-size: 18px;
     font-family: "Lucida Sans Unicode";
     font-weight: bold;
-
 }
 #navbar a:hover{
     color:#EAEAEA;
     display:inline-block;
-    float:left;
     background-color: #8E793E;
     border: 3px;
     border-left: 10px;
@@ -95,4 +198,164 @@ img#Homepic {
     margin-left: -10px;
     margin-right: -10px;
 
+}
+ {box-sizing:border-box}
+.mySlides {display:none}
+
+
+.slideshow {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+.slide-imgs{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+.slideshow-background-colour{
+    background-color: #333;
+}
+.numbertext {
+    color: #FFFFFF;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    font-family: "Lucida Sans Unicode";
+    font-size: 16px;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.next {
+    right: 0;
+}
+.prev:hover, .next:hover {
+    background-color: #8E793E;
+}
+.slideshow-captions {
+    color: #FFFFFF;
+    font-family: "Lucida Sans Unicode";
+    font-size: 16px;
+    position: absolute;
+    bottom: 8px;
+    background-color: #8E793E;
+    text-align: center;
+    padding: 10px;
+}
+/*Makes the menu drop down vertically*/
+@media only screen and (max-width : 900px) {
+
+    header {
+        position: absolute;
+        z-index: 100;
+        height: 190px;
+        margin-bottom: 10px;
+        border-bottom: 15px;
+        border-bottom-style: solid;
+        border-bottom-color: #111111;
+
+        margin-top: -220px;
+    }
+
+    #navbar li {
+        text-align: center;
+        width: 100%;
+        padding: 4px 0;
+        margin: 0;
+    }
+
+    .content {
+        margin-top: 220px;
+    }
+
+    #navbar a:hover {
+        color: #fff;
+        background-color: rgba(142, 121, 62, 0.4);
+        border: 5px;
+        border-left: 10px;
+        border-right: 10px;
+        border-left-style: solid;
+        border-left-color: rgba(142, 121, 62, 0.1);
+        border-right-style: solid;
+        border-right-color: rgba(142, 121, 62, 0.1);
+        border-style: solid;
+        border-color: rgba(142, 121, 62, 0.1);
+        padding-left: 40%;
+        padding-right: 40%;
+    }
+
+    @media only screen and (max-width: 300px) {
+        .prev, .next, .text {
+            font-size: 11px
+        }
+    }
+}
+/*animation for donate button on home page, also used in feeder
+ */
+#home-donate{
+    background-color: #464646;
+    text-align: left;
+    font-size: 25px;
+}
+.Link-text {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-decoration: none;
+    padding: 35px;
+    color: #231F20;
+    text-align: center;
+    font-family: "Lucida Sans Unicode";
+    font-size: large;
+    background-color: #CCCCCC;
+    display: block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    margin-bottom: 10px;
+}
+.Link-text:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #8E793E;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.Link-text:hover, .Link-text:focus, #Link-text:active {
+    color: white;
+}
+.Link-text:hover:before, .Link-text:focus:before, .Link-text:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
 }
